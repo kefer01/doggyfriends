@@ -1,0 +1,16 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenedor-anuncios {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.anuncio {
+    .contenido-anuncio {
+        .boton-amarillo-block{
+            @include m.boton(v.$morado, v.$blanco);
+        }
+    }
+}
