@@ -4,11 +4,17 @@ Pasos para iniciar el proyecto por primera vez
 
 Requisitos:
 	1. NodeJS preferiblemente la version LTS ( v. actual 18.14.2 LTS)
+	
 	2. NPM manejador de paquetes de Node (Viene instalado junto a NodeJs)
+	
 	3. Composer Manejador de paqueres de PHP
+	
 	4. PHP minimo version 8.0
+	
 	5. MySQL o la version MariaDB
+	
 	6. HeidiSQL o cualquier otro gestor de BD como PHPMyAdmin, Workbench etc.
+	
 
 Para evitar instalar cada uno por separado aconsejo instalar LARAGON que ya trae todo incluido.
 
