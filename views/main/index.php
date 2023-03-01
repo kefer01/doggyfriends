@@ -33,7 +33,10 @@
 >>>>>>> 35cdbc1 (Cambio Varios Imagenes)
 <div class="inicio">
     <p>Dejando huella, en su vida y en la tuya...</p>
+<<<<<<< HEAD
     <p>Kevin</p>
+=======
+>>>>>>> a69b008 (Le agregue unos puntos al slogan)
 </div>
 <div class="info">
 <div class="contenedor-anuncios">
