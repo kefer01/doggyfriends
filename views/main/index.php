@@ -33,6 +33,7 @@
 >>>>>>> 35cdbc1 (Cambio Varios Imagenes)
 <div class="inicio">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <p>Dejando huella, en su vida y en la tuya...</p>
 <<<<<<< HEAD
     <p>Kevin</p>
@@ -41,6 +42,12 @@
 =======
     <p>Huellas que marcan tu vida</p>
 >>>>>>> 89b41d9 (Le cambie el titulo y el slogan)
+=======
+    <p>Huellas que marcan tu vida</p>
+=======
+    <p>Dejando huella, en su vida y en la tuya...</p>
+>>>>>>> 10f526b (dfsfdsf)
+>>>>>>> a1113b0 (dfsfdsf)
 </div>
 <div class="info">
 <div class="contenedor-anuncios">
