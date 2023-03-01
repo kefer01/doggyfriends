@@ -1,5 +1,6 @@
-<h1>Bienvenidos</h1>
+<h1>Bienvenidos a todos</h1>
 <div class="inicio">
+    <p>Huellas que marcan tu vida</p>
     <p>Dejando huella, en su vida y en la tuya...</p>
     <p>Kevin</p>
     <p>Jose</p>
