@@ -1,6 +1,6 @@
-<h1>Bienvenidos</h1>
+<h1>Bienvenidos a todos</h1>
 <div class="inicio">
-    <p>Dejando huella, en su vida y en la tuya...</p>
+    <p>Huellas que marcan tu vida</p>
 </div>
 <div class="info">
 <div class="contenedor-anuncios">
