@@ -1,4 +1,4 @@
-<h1>Bienvenidos</h1>
+<h1>Mascotas Disponibles</h1>
 <div class="inicio">
     <p>Dejando huella, en su vida y en la tuya</p>
 </div>
