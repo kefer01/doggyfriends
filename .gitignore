@@ -1,7 +1,7 @@
+# src/
 node_modules/
 vendor/
 gulpfile.js
 package.json
 package-lock.json
 .env
-README.md
