@@ -5,5 +5,4 @@ gulpfile.js
 package.json
 package-lock.json
 .env
-README.md
 Router.php
