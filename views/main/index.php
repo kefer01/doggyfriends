@@ -20,7 +20,7 @@
                     <p><?php echo $mascota->raza; ?></p>
                 </li>
                 <li>
-                    <img class="icono" loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icono_genero">
+                    <img class="icono" loading="lazy" src="img/gender_sex_icon_131294" alt="icono_genero">
                     <p><?php echo $mascota->genero; ?></p>
                 </li>
                 <li>
