@@ -46,8 +46,11 @@
     <p>Huellas que marcan tu vida</p>
 =======
     <p>Dejando huella, en su vida y en la tuya...</p>
+<<<<<<< HEAD
 >>>>>>> 10f526b (dfsfdsf)
 >>>>>>> a1113b0 (dfsfdsf)
+=======
+>>>>>>> 9bb386d (Cambie index y puse nombres)
 </div>
 <div class="info">
 <div class="contenedor-anuncios">
