@@ -1,6 +1,10 @@
 <h1>Bienvenidos a todos</h1>
 <div class="inicio">
     <p>Huellas que marcan tu vida</p>
+    <p>Dejando huella, en su vida y en la tuya...</p>
+    <p>Kevin</p>
+    <p>Jose</p>
+    <p>Julio</p>
 </div>
 <div class="info">
 <div class="contenedor-anuncios">
@@ -20,7 +24,7 @@
                     <p><?php echo $mascota->raza; ?></p>
                 </li>
                 <li>
-                    <img class="icono" loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icono_genero">
+                    <img class="icono" loading="lazy" src="doggyfriends\src\img\gender_sex_icon_131294.ico" alt="icono_genero">
                     <p><?php echo $mascota->genero; ?></p>
                 </li>
                 <li>
