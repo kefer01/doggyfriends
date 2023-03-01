@@ -5,4 +5,8 @@ gulpfile.js
 package.json
 package-lock.json
 .env
+<<<<<<< HEAD
+README.md
+=======
+>>>>>>> cec2c7145775b2ed4920e85e6ec7cbeca2f9a00b
 Router.php
