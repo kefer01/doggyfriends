@@ -27,9 +27,9 @@ $auth = $_SESSION['login'] ?? false;
                 <div class="derecha">
                     <nav class="navegacion ver">
                         <a href="/cita">Dar en adopción</a>
-                        <a href="/centros">Protección Animal</a>
-                        <a href="/blog">Nosotros</a>
-                        <a href="/blog">Adoptar</a>
+                        <a href="/proteccion">Protección Animal</a>
+                        <a href="/nosotros">Nosotros</a>
+                        <a href="/adoptar">Adoptar</a>
                         <?php if (!$auth) { ?>
                             <a href="/login">Iniciar Sesión</a>
                         <?php } else { ?>
