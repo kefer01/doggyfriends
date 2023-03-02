@@ -6,7 +6,6 @@ use MVC\Router;
 
 class AdminController {
     public static function index(Router $router) {
-        debuguear('estoy en index admin');
         iniciaSesion();
         isAuth();
         isAdmin();
@@ -32,6 +31,7 @@ class AdminController {
         // $citas = AdminCita::SQL($consulta);
 
         $router->render('admin/index', [
+            'titulo' => 'Administrador',
             'nombre' => $_SESSION['nombre']
         ]);
     }

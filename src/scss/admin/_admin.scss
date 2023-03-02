@@ -1,0 +1,32 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.admin{
+
+    .nombre-pagina{
+        padding-top: 4rem;
+        text-align: center;
+    }
+    .panel {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5rem;
+    }
+    .card-admin {
+        padding: 3rem;
+        border: 1px solid #383737;
+        border-radius: 2rem;
+        p {
+            text-align: center;
+        }
+        .boton-naranja {
+            margin-top: 2rem;
+            @include m.boton(v.$naranja, v.$blanco);
+            padding: 2rem 4rem;
+            border-radius: 1rem;
+        }
+    }
+}
