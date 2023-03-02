@@ -2,21 +2,21 @@
 
 namespace Controllers;
 
-use Model\AdminCita;
 use MVC\Router;
 
 class AdminController {
     public static function index(Router $router) {
+        debuguear('estoy en index admin');
         iniciaSesion();
         isAuth();
         isAdmin();
 
-        $fecha = $_GET['fecha'] ??  date('Y-m-d');
-        $fechas = explode('-', $fecha);
+        // $fecha = $_GET['fecha'] ??  date('Y-m-d');
+        // $fechas = explode('-', $fecha);
 
-        if(!checkdate($fechas[1], $fechas[2], $fechas[0])){
-            header('Location: /404');
-        };
+        // if(!checkdate($fechas[1], $fechas[2], $fechas[0])){
+        //     header('Location: /404');
+        // };
 
 
         // // Consultar la base de datos
@@ -32,8 +32,7 @@ class AdminController {
         // $citas = AdminCita::SQL($consulta);
 
         $router->render('admin/index', [
-            'nombre' => $_SESSION['nombre'],
-            'fecha' => $fecha
+            'nombre' => $_SESSION['nombre']
         ]);
     }
 }

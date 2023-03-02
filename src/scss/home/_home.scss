@@ -8,8 +8,10 @@
 }
 
 .anuncio {
+    padding: 2rem;
+
     .contenido-anuncio {
-        .boton-amarillo-block{
+        .boton-morado-block {
             @include m.boton(v.$morado, v.$blanco);
         }
     }
@@ -20,6 +22,41 @@
     width: 5rem;
 }
 
-.iconos-caracteristicas{
+.iconos-caracteristicas {
     list-style: none;
+
+    li {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        padding: 2rem 1rem;
+    }
+}
+
+.containerback {
+    display: flex;
+    align-content: flex-end;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-image: url(../img/imagenHome1.jpg);
+    padding: 1rem 0 3rem 0;
+    width: 100%;
+    height: 70rem;
+    background-position: center center;
+    background-size: cover;
+
+    .inicio {
+        max-width: 50rem;
+        padding-bottom: 5rem;
+        h1 {
+            color: v.$blanco;
+        }
+        .boton-amarillo-block {
+            margin-top: 2rem;
+            @include m.boton(v.$naranja, v.$blanco);
+            display: inline;
+            padding: 2rem 4rem;
+            border-radius: 5rem;
+        }
+    }
 }
