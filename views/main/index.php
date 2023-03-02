@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 <h1>Bienvenidos a todos</h1>
-=======
 <!-- <h1>Mascotas Disponibles</h1> -->
 
 <div align="center" id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -30,34 +28,16 @@
   </a>
 </div>
 
->>>>>>> 35cdbc1 (Cambio Varios Imagenes)
 <div class="inicio">
-<<<<<<< HEAD
-<<<<<<< HEAD
     <p>Dejando huella, en su vida y en la tuya...</p>
-<<<<<<< HEAD
     <p>Kevin</p>
-=======
->>>>>>> a69b008 (Le agregue unos puntos al slogan)
-=======
-    <p>Huellas que marcan tu vida</p>
->>>>>>> 89b41d9 (Le cambie el titulo y el slogan)
-=======
-    <p>Huellas que marcan tu vida</p>
-=======
-    <p>Dejando huella, en su vida y en la tuya...</p>
-<<<<<<< HEAD
->>>>>>> 10f526b (dfsfdsf)
->>>>>>> a1113b0 (dfsfdsf)
-=======
->>>>>>> 9bb386d (Cambie index y puse nombres)
 </div>
 <div class="info">
 <div class="contenedor-anuncios">
     <?php foreach($mascotas as $mascota) :?>
     <div class="anuncio">
 
-        <img loading="lazy" src="" alt="Foto Mascota">
+        <img loading="lazy" src="/imagenes/<?php echo $mascota->imagen; ?>" alt="Foto Mascota">
 
         <div class="contenido-anuncio">
             <h3><?php echo $mascota->nombre; ?></h3>
@@ -66,8 +46,7 @@
 
             <ul class="iconos-caracteristicas">
                 <li>
-                    <img class="icono" loading="lazy" src="build/img/IconoRaza.png" alt="icono_raza">
-
+                    <img class="icono" loading="lazy" src="build/img/icono_wc.svg" alt="icono_raza">
                     <p><?php echo $mascota->raza; ?></p>
                 </li>
                 <li>
