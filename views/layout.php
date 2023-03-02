@@ -19,7 +19,7 @@ $auth = $_SESSION['login'] ?? false;
             <div class="barra">
                 <div class="izquierda">
                     <a href="/">
-                        <img src="/build/img/LOGO DOGGY.png" alt="Logotipo Doggy Friends">
+                        <img src="/build/img/logodoggy.png" alt="Logotipo Doggy Friends">
                     </a>
                 </div>
                 <div class="mobile-menu">
