@@ -1,4 +1,36 @@
+<<<<<<< HEAD
 <h1>Bienvenidos a todos</h1>
+=======
+<!-- <h1>Mascotas Disponibles</h1> -->
+
+<div align="center" id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-50" src="https://www.bbva.ch/wp-content/uploads/2022/05/recurso_mascotas.jpg" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-50" src="https://www.bbva.ch/wp-content/uploads/2022/05/recurso_mascotas.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-50" src="https://www.bbva.ch/wp-content/uploads/2022/05/recurso_mascotas.jpg" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+>>>>>>> 35cdbc1 (Cambio Varios Imagenes)
 <div class="inicio">
     <p>Dejando huella, en su vida y en la tuya...</p>
     <p>Kevin</p>
@@ -8,7 +40,7 @@
     <?php foreach($mascotas as $mascota) :?>
     <div class="anuncio">
 
-        <img loading="lazy" src="/imagenes/<?php echo $mascota->imagen; ?>" alt="Foto Mascota">
+        <img loading="lazy" src="" alt="Foto Mascota">
 
         <div class="contenido-anuncio">
             <h3><?php echo $mascota->nombre; ?></h3>
@@ -17,7 +49,8 @@
 
             <ul class="iconos-caracteristicas">
                 <li>
-                    <img class="icono" loading="lazy" src="build/img/icono_wc.svg" alt="icono_raza">
+                    <img class="icono" loading="lazy" src="build/img/IconoRaza.png" alt="icono_raza">
+
                     <p><?php echo $mascota->raza; ?></p>
                 </li>
                 <li>
