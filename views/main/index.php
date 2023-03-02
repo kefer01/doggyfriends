@@ -46,15 +46,15 @@
 
             <ul class="iconos-caracteristicas">
                 <li>
-                    <img class="icono" loading="lazy" src="build/img/icono_wc.svg" alt="icono_raza">
+                    <img class="icono" loading="lazy" src="build/img/IconoRaza.png" alt="icono_raza">
                     <p><?php echo $mascota->raza; ?></p>
                 </li>
                 <li>
-                    <img class="icono" loading="lazy" src="doggyfriends\src\img\gender_sex_icon_131294.ico" alt="icono_genero">
+                    <img class="icono" loading="lazy" src="build/img/IconoGenero.png" alt="icono_genero">
                     <p><?php echo $mascota->genero; ?></p>
                 </li>
                 <li>
-                    <img class="icono" loading="lazy" src="build/img/icono_dormitorio.svg" alt="icono_peso">
+                    <img class="icono" loading="lazy" src="build/img/IconoPeso.png" alt="icono_peso">
                     <p><?php echo $mascota->peso; ?> Kg.</p>
                 </li>
             </ul>
