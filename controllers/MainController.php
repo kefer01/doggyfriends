@@ -9,7 +9,14 @@ class MainController {
 
     public static function main(Router $router) {
 
-        $mascotas = Mascota::all();
+        // Consultar la base de datos
+        $consulta = "SELECT m.id_mascota, m.nombre, r.raza, g.nombre genero, m.peso, m.descripcion, ";
+        $consulta .= " m.id_usuario, m.estado, m.imagen  ";
+        $consulta .= " from mascota m  ";
+        $consulta .= " inner join genero_mascota g on m.genero = g.id_genero  ";
+        $consulta .= " inner join raza r on m.raza = r.id_raza";
+        // debuguear($consulta);
+        $mascotas = Mascota::SQL($consulta);
         $router->render('main/index', [
             'titulo' => 'Inicio',
             'mascotas' => $mascotas
