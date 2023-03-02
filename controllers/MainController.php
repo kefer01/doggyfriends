@@ -11,19 +11,22 @@ class MainController {
 
         $mascotas = Mascota::all();
         $router->render('main/index', [
+            'titulo' => 'Inicio',
             'mascotas' => $mascotas
         ]);
     }
 
-    public static function blog(Router $router) {
+    public static function proteccion(Router $router) {
 
-        $router->render('main/blog', []);
+        $router->render('main/proteccion', [
+            'titulo' => 'Protección Animal',
+        ]);
     }
 
-    public static function centros(Router $router) {
-        $centros = Centro::all();
-        $router->render('main/centros', [
-            'centros' => $centros
+    public static function nosotros(Router $router) {
+  
+        $router->render('main/nosotros', [
+            'titulo' => 'Nosotros',
         ]);
     }
 }

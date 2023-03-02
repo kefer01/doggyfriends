@@ -11,9 +11,9 @@ $router = new Router();
 // Pagina Main
 $router->get('/', [MainController::class, 'main']);
 // Pagina Blog
-$router->get('/blog', [MainController::class, 'blog']);
+$router->get('/proteccion', [MainController::class, 'proteccion']);
 // Pagina Blog
-$router->get('/centros', [MainController::class, 'centros']);
+$router->get('/nosotros', [MainController::class, 'nosotros']);
 
 // Login
 $router->get('/login', [LoginController::class, 'login']);
