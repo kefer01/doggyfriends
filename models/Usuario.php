@@ -23,7 +23,7 @@ class Usuario extends ActiveRecord
 
     public function __construct($args = [])
     {
-        $this->id_usuario = $args['id_usuario'] ?? null;
+        $this->id = $args['id_usuario'] ?? null;
         $this->p_nombre = $args['p_nombre'] ?? '';
         $this->s_nombre = $args['s_nombre'] ?? '';
         $this->p_apellido = $args['p_apellido'] ?? '';
@@ -32,9 +32,9 @@ class Usuario extends ActiveRecord
         $this->usuario = $args['usuario'] ?? '';
         $this->pass = $args['pass'] ?? '';
         $this->password2 = $args['password2'] ?? '';
-        $this->estado = $args['estado'] ?? '';
+        $this->estado = $args['estado'] ?? '0';
         $this->token = $args['token'] ?? '';
-        $this->id_rol = $args['id_rol'] ?? 0;
+        $this->id_rol = $args['id_rol'] ?? 3;
         $this->confirmado = $args['confirmado'] ?? '0';
     }
 
@@ -43,7 +43,7 @@ class Usuario extends ActiveRecord
         if(!$this->p_nombre){
             self::$alertas['error'][] = 'El Nombre del Usuario es Obligatorio';
         }
-        if(!$this->p_Apellido){
+        if(!$this->p_apellido){
             self::$alertas['error'][] = 'El Apellido del Usuario es Obligatorio';
         }
         if(!$this->correo){

@@ -7,20 +7,24 @@
 
         <form action="/crear" class="formulario" method="POST">
             <div class="campo">
-                <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Tu Nombre" value="<?php echo $usuario->p_nombre; ?>">
+                <label for="p_nombre">Nombre</label>
+                <input type="text" name="p_nombre" id="p_nombre" placeholder="Tu Nombre" value="<?php echo $usuario->p_nombre; ?>">
             </div>
             <div class="campo">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Tu Email" value="<?php echo $usuario->correo; ?>">
+                <label for="p_apellido">Apellido</label>
+                <input type="text" name="p_apellido" id="p_apellido" placeholder="Tu apellido" value="<?php echo $usuario->p_apellido; ?>">
             </div>
             <div class="campo">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="Tu Password">
+                <label for="correo">Email</label>
+                <input type="email" name="correo" id="correo" placeholder="Tu Email" value="<?php echo $usuario->correo; ?>">
+            </div>
+            <div class="campo">
+                <label for="pass">Password</label>
+                <input type="password" name="pass" id="pass" placeholder="Tu Contraseña">
             </div>
             <div class="campo">
                 <label for="password2">Repetir Password</label>
-                <input type="password" name="password2" id="password2" placeholder="Repite tu Password">
+                <input type="password" name="password2" id="password2" placeholder="Repite tu Contraseña">
             </div>
 
             <input type="submit" class="boton" value="Crear Cuenta">

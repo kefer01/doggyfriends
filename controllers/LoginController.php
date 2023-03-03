@@ -65,12 +65,12 @@ class LoginController
         $alertas = [];
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $usuario->sincronizar($_POST);
 
+            $usuario->sincronizar($_POST);
             $alertas = $usuario->validarNuevaCuenta();
 
             if (empty($alertas)) {
-                $existeUsuario = Usuario::where('email', $usuario->email);
+                $existeUsuario = Usuario::where('correo', $usuario->correo);
                 if ($existeUsuario) {
                     Usuario::setAlerta('error', 'El Usuario ya esta registrado');
                     $alertas = Usuario::getAlertas();
@@ -87,14 +87,12 @@ class LoginController
                     // Crear un nuevo usuario
                     // $resultado = $usuario->guardar();
                     $resultado = true;
-
                     // Enviar email
-                    $email = new Email($usuario->email, $usuario->nombre, $usuario->token);
+                    $email = new Email($usuario->p_nombre, $usuario->p_apellido, $usuario->correo, $usuario->token);
                     $email->enviarConfirmacion();
-                    debuguear($email);
-                    // if ($resultado) {
-                    //     header('Location: /mensaje');
-                    // }
+                    if ($resultado) {
+                        header('Location: /mensaje');
+                    }
                 }
             }
         }
@@ -141,9 +139,30 @@ class LoginController
 
     public static function confirmar(Router $router)
     {
+        $alertas = [];
+        // debuguear($_GET);
+        $token = s($_GET['token']);
+        $usuario = Usuario::where('token', $token);
+
+        if (empty($usuario)) {
+            // Mostrar mensaje de error
+            Usuario::setAlerta('error', 'Token No Válido');
+        } else {
+            // Modificar a usuario confirmado
+            $usuario->confirmado = "1";
+            $usuario->token = null;
+
+            // Actualizar los datos del usuario en la BD (Confirmado y Token)
+            $usuario->guardar();
+            Usuario::setAlerta('exito', "Cuenta Comprobada Correctamente");
+        }
+        // Obtener alertas
+        $alertas = Usuario::getAlertas();
+
         // Render a la vista
         $router->render('auth/confirmar', [
-            'titulo' => ''
+            'titulo' => 'Confirmar',
+            'alertas' => $alertas
         ]);
     }
 }
