@@ -1,6 +1,9 @@
 <?php
-
 namespace Classes;
+require __DIR__ . '/../vendor/autoload.php';
+use Dotenv\Dotenv;
+$dotenv = Dotenv::createImmutable(__DIR__);
+
 
 use PHPMailer\PHPMailer\PHPMailer;
 
@@ -25,16 +28,16 @@ class Email
         // Crear el objeto de email
         $mail = new PHPMailer();
         $mail->isSMTP();
-        // $mail->SMTPDebug = 2;
+        $mail->SMTPDebug = 2;
         $mail->Host = 'smtp.hostinger.com';
         $mail->SMTPAuth = true;
         $mail->Port = 587;
-        $mail->Username = 'soporte@thedoggyfriends.com';
-        $mail->Password = 'Portales123.';
+        $mail->Username = $_ENV['EMA_USER'];
+        $mail->Password = $_ENV['EMA_PASS'];
         $mail->setFrom('soporte@thedoggyfriends.com','Soporte - The Doggy Friends');
-        $mail->addAddress('kolivah@miumg.edu.gt', 'Kevin Oliva' );
+        $mail->addAddress($this->email, $this->nombre . " " . $this->apellido );
         $mail->Subject = 'Confirma tu cuenta en The Doggy Friends';
-
+        // debuguear($mail);
         //Set HTML
         $mail->isHTML(TRUE);
         $mail->CharSet = 'UTF-8';
@@ -48,11 +51,11 @@ class Email
 
         // Enviar el mail
         $mail->send();
-        // if (!$mail->send()) {
-        //     debuguear('Mailer Error: ' . $mail->ErrorInfo);
-        // } else {
-        //     debuguear('The email message was sent.');
-        // }
+        if (!$mail->send()) {
+            debuguear('Mailer Error: ' . $mail->ErrorInfo);
+        } else {
+            debuguear('The email message was sent.');
+        }
     }
 
     public function enviarInstrucciones()
