@@ -140,7 +140,7 @@ class LoginController
     public static function confirmar(Router $router)
     {
         $alertas = [];
-        // debuguear($_GET);
+        debuguear($_GET);
         $token = s($_GET['token']);
         $usuario = Usuario::where('token', $token);
 
