@@ -5,6 +5,7 @@ require_once __DIR__ . '/../includes/app.php';
 use Controllers\LoginController;
 use Controllers\AdminController;
 use Controllers\MainController;
+use Controllers\UsuarioController;
 use MVC\Router;
 $router = new Router();
 
@@ -33,8 +34,8 @@ $router->get('/reestablecer', [LoginController::class, 'reestablecer']);
 $router->post('/reestablecer', [LoginController::class, 'reestablecer']);
 
 // Confirmacion de cuenta
-$router->get('/mensaje', [LoginController::class, 'mensaje']);
 $router->get('/confirmar', [LoginController::class, 'confirmar']);
+$router->get('/mensaje', [LoginController::class, 'mensaje']);
 
 // Area privada
 $router->get('/admin', [AdminController::class, 'index']);

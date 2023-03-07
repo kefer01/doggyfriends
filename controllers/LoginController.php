@@ -23,7 +23,7 @@ class LoginController
                     // Verificar el password
                     if ($usuario->comprobarPasswordAndVerificado($auth->pass)) {
                         // Autenticar el usuario
-                        $_SESSION['id'] = $usuario->id_usuario;
+                        $_SESSION['id'] = $usuario->id;
                         $_SESSION['nombre'] = $usuario->p_nombre . " " . $usuario->p_apellido;
                         $_SESSION['correo'] = $usuario->correo;
                         $_SESSION['login'] = true;
@@ -53,7 +53,7 @@ class LoginController
 
     public static function logout()
     {
-        if(isset($_SESSION)){
+        if (isset($_SESSION)) {
             $_SESSION = [];
             header('Location: /');
         }
@@ -99,7 +99,7 @@ class LoginController
 
         // Render a la vista
         $router->render('auth/crear', [
-            'titulo' => 'Crea tu cuenta en UpTask',
+            'titulo' => 'Crea tu cuenta en The Doggy Friends',
             'usuario' => $usuario,
             'alertas' => $alertas
         ]);
@@ -109,7 +109,8 @@ class LoginController
     {
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        };
+        }
+        ;
 
         // Render a la vista
         $router->render('auth/olvide', [
@@ -140,21 +141,20 @@ class LoginController
     public static function confirmar(Router $router)
     {
         $alertas = [];
-        debuguear($_GET);
         $token = s($_GET['token']);
         $usuario = Usuario::where('token', $token);
-
         if (empty($usuario)) {
             // Mostrar mensaje de error
             Usuario::setAlerta('error', 'Token No Válido');
         } else {
             // Modificar a usuario confirmado
             $usuario->confirmado = "1";
-            $usuario->token = null;
-
+            $usuario->token = "";
+            // Eliminar password2
+            unset($usuario->password2);
             // Actualizar los datos del usuario en la BD (Confirmado y Token)
             $usuario->guardar();
-            Usuario::setAlerta('exito', "Cuenta Comprobada Correctamente");
+            Usuario::setAlerta('exito', "Cuenta Verificada Correctamente");
         }
         // Obtener alertas
         $alertas = Usuario::getAlertas();
