@@ -1,12 +1,7 @@
 <h1 class="nombre-pagina">Perfil del Paciente</h1>
 <p class="descripcion-pagina">Elige que deseas hacer</p>
-
-<?php
-include_once __DIR__ . '/../templates/barra.php';
-?>
-
 <div>
-    <p>Actualmente tienes: <?php echo $_SESSION['vacunas']; ?> dosis aplicadas</p>
+    <p>Actualmente tienes: dosis aplicadas</p>
     <div class="opciones">
         <div>
             <h3>Realizar cita</h3>

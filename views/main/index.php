@@ -1,7 +1,7 @@
 <div class="containerback">
   <div class="inicio">
     <h1>Dejando huella, en su vida y en la tuya...</h1>
-    <a href="/login; ?>" class="boton-amarillo-block">Quiero Adoptar</a>
+    <a href="/login" class="boton-amarillo-block">Quiero Adoptar</a>
 
   </div>
 </div>
